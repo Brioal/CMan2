@@ -6,4 +6,5 @@
     <color name="colorLightWhite">#D6D6D6</color>
     <color name="colorBgWhite">#F7F7F7</color>
     <color name="colorTv_deviceName_black">#363636</color>
+    <color name="device_tv_color_outline">#999999</color>
 </resources>

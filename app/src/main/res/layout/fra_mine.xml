@@ -49,7 +49,7 @@
     <!--分割线-->
     <!--设备管理-->
     <Button
-        
+        android:id="@+id/mine_tv_deviceManager"
         style="@style/CMTheme.TV_mine"
         android:drawableLeft="@mipmap/ic_devices"
         android:text="设备管理"
