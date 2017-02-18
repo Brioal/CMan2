@@ -1,0 +1,51 @@
+<resources>
+
+    <style name="CMTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--NoActionBarStyle-->
+    <style name="CMTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CMTheme.LauncherTheme">
+        <item name="android:windowBackground">@drawable/ic_launcher_theme</item>
+    </style>
+
+    <style name="CMTheme.TitleTv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <!--个人中心的菜单字体Style-->
+    <style name="CMTheme.TV_mine">
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:drawableRight">@mipmap/ic_more</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#363636</item>
+        <item name="android:textSize">36px</item>
+    </style>
+
+    <!--个人中心的菜单Icon Style-->
+    <style name="CMTheme.Iv_mine">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

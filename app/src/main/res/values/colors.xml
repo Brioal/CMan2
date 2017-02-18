@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#419FFF</color>
+    <color name="colorLightWhite">#D6D6D6</color>
+    <color name="colorBgWhite">#F7F7F7</color>
+    <color name="colorTv_deviceName_black">#363636</color>
+</resources>

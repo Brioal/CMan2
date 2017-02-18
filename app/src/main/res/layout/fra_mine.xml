@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <!--标题-->
+    <TextView
+        style="@style/CMTheme.TitleTv"
+        android:text="个人中心"/>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLightWhite"/>
+    <!--个人信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <!--头像-->
+        <com.brioal.circleimage.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_shangcheng"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_icon_woman"
+            android:gravity="center"
+            android:text="Brioal"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorBgWhite"/>
+    <!--分割线-->
+    <!--设备管理-->
+    <Button
+        
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_devices"
+        android:text="设备管理"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="45dp"
+        android:background="@color/colorLightWhite"/>
+    <!--密码修改-->
+    <Button
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_pass"
+        android:text="密码修改"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="45dp"
+        android:background="@color/colorLightWhite"/>
+
+    <!--配置网络-->
+    <Button
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_wifi"
+        android:text="配置网络"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorBgWhite"/>
+    <!--反馈-->
+    <Button
+        android:id="@+id/textView"
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_back"
+        android:text="反馈"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="45dp"
+        android:background="@color/colorLightWhite"/>
+
+    <!--关于我们-->
+    <Button
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_about"
+        android:text="关于我们"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorBgWhite"/>
+    <!--语言切换-->
+    <Button
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_language"
+        android:text="语言切换"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="45dp"
+        android:background="@color/colorLightWhite"/>
+
+    <!--更新-->
+    <Button
+        style="@style/CMTheme.TV_mine"
+        android:drawableLeft="@mipmap/ic_update"
+        android:text="更新"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorLightWhite"/>
+</LinearLayout>

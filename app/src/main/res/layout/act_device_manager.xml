@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".devicemanager.DeviceManagerActivity">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <TextView
+            style="@style/CMTheme.TitleTv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="设备管理"/>
+
+        <ImageButton
+            android:id="@+id/devmag_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back_black"/>
+    </RelativeLayout>
+    <!--列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/devmag_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLightWhite">
+
+    </android.support.v7.widget.RecyclerView>
+    <!--修改名称按钮-->
+    <TextView
+        android:id="@+id/devmag_tv_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/devmanager_btn_change"
+        android:enabled="false"
+        android:paddingBottom="8dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="8dp"
+        android:text="修改名称"
+        android:textColor="@drawable/devmanager_btn_color"/>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWhite"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <TextView
+        style="@style/CMTheme.TitleTv"
+        android:text="设备列表"
+        />
+    <!--设备总数-->
+    <TextView
+        android:id="@+id/list_tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:text="0 个智能设备"
+        android:textColor="#333333"
+        android:textSize="19sp"
+        android:textStyle="normal"/>
+    <!--设备状态-->
+    <TextView
+        android:id="@+id/list_tv_statue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:text="所有设备运行正常"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="normal"/>
+    <!--设备列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"/>
+    <!--添加新设备-->
+    <TextView
+        android:id="@+id/list_tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawableRight="@mipmap/ic_add"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="添加新成员"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"/>
+</LinearLayout>

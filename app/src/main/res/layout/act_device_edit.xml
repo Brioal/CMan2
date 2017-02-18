@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.brioal.cman2.deviceedit.DeviceEditActivity">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/changename_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back_black"/>
+
+        <TextView
+            style="@style/CMTheme.TitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="修改名称"/>
+    </RelativeLayout>
+    <!--输入框-->
+    <EditText
+        android:id="@+id/changename_et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white"
+        android:hint="请出入新名称"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorTv_deviceName_black"
+        android:textColorHint="#cccccc"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/changename_tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/devmanager_btn_change"
+        android:enabled="true"
+        android:paddingBottom="8dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:paddingTop="8dp"
+        android:text="保存"
+        android:textColor="@drawable/devmanager_btn_color"/>
+</LinearLayout>
