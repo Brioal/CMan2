@@ -4,6 +4,7 @@ import android.os.Handler;
 
 import com.brioal.cman2.bean.DeviceBean;
 import com.brioal.cman2.interfaces.OnDeviceLoadListener;
+import com.brioal.cman2.interfaces.OnNormalOperationListener;
 import com.brioal.cman2.list.contract.ListContract;
 import com.brioal.cman2.list.model.ListModelImpl;
 
@@ -77,6 +78,54 @@ public class ListPresenterImpl implements ListContract.Presenter {
                     @Override
                     public void run() {
                         mView.showLoadingFailed("更新设备列表失败,请检查网络");
+                    }
+                });
+            }
+        });
+    }
+
+    //连接一个设备
+    @Override
+    public void connect(DeviceBean bean) {
+        if (!bean.isOnline()) {
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    mView.showConnectFailed("只有正在运行的设备才能进行操作");
+                }
+            });
+            return;
+        }
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                mView.showConnecting("正在验证设备状态...");
+            }
+        });
+        mModel.refreshDeviceStatue(bean, new OnNormalOperationListener() {
+            @Override
+            public void success(String msg) {
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mView.showConnecting("状态良好  准备进入设备");
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                mView.showConnectDone();
+                            }
+                        }, 2000);
+                    }
+                }, 2000);
+
+            }
+
+            @Override
+            public void failed(final String error) {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mView.showConnectFailed(error);
                     }
                 });
             }

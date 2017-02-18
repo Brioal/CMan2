@@ -1,15 +1,21 @@
 package com.brioal.cman2.list;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -62,6 +68,9 @@ public class ListFragment extends BaseFragment implements ListContract.View {
     private boolean isRefreshing = false;
     private ListPresenterImpl mPresenter;
     private ListAdapter mAdapter;
+    private AlertDialog mLoadingDialog;
+    private TextView mLoadTvMsg;
+    private ImageView mLoadImg;
 
     @Nullable
     @Override
@@ -165,7 +174,7 @@ public class ListFragment extends BaseFragment implements ListContract.View {
         mAdapter.setEnterListener(new OnDeviceEnterListener() {
             @Override
             public void enter(DeviceBean bean) {
-                // TODO: 2017/2/18 判断是否在线+进入设备
+                mPresenter.connect(bean);
             }
         });
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
@@ -177,5 +186,69 @@ public class ListFragment extends BaseFragment implements ListContract.View {
         SpannableString ss = new SpannableString(deviceCount + " 个智能设备");
         ss.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.colorAccent)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         mTvCount.setText(ss);
+    }
+
+    //显示连接设备,并且更新进度
+    @Override
+    public void showConnecting(String msg) {
+        if (mLoadingDialog != null && mLoadTvMsg != null) {
+            mLoadTvMsg.setText(msg);
+            if (!mLoadingDialog.isShowing()) {
+                mLoadingDialog.show();
+            }
+        } else {
+            //重新创建Dialog
+            mLoadingDialog = new AlertDialog.Builder(mContext).create();
+            mLoadingDialog.setCancelable(false);
+            mLoadingDialog.show();
+            Window window = mLoadingDialog.getWindow();
+            window.setContentView(R.layout.layout_loading);
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            WindowManager windowManager = window.getWindowManager();
+            Display display = windowManager.getDefaultDisplay();
+            window.setLayout(display.getWidth() - 100, display.getWidth() / 2);
+            mLoadTvMsg = (TextView) window.findViewById(R.id.loading_tv_msg);
+            mLoadTvMsg.setText(msg);
+            mLoadImg = (ImageView) window.findViewById(R.id.loading_iv_img);
+        }
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.anim_rotating);
+        animation.setDuration(900);
+        animation.setInterpolator(new AccelerateDecelerateInterpolator());
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if (mLoadingDialog.isShowing()) {
+                    mLoadImg.startAnimation(animation);
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        mLoadImg.startAnimation(animation);
+    }
+
+    @Override
+    public void showConnectFailed(String msg) {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
+        }
+        showToast(msg);
+    }
+
+    @Override
+    public void showConnectDone() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
+        }
+        // TODO: 2017/2/18 进入设备界面
+        showToast("进入设备界面");
     }
 }

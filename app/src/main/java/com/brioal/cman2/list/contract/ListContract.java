@@ -29,12 +29,23 @@ public class ListContract {
         //显示设备总数
         void showDeviceCount(int deviceCount);
 
+        //显示正在连接
+        void showConnecting(String msg);
+
+        //显示连接失败
+        void showConnectFailed(String msg);
+
+        //显示连接成功
+        void showConnectDone();
+
     }
 
     public interface Presenter {
         void start();//开始=显示刷新+数据加载
 
         void refresh();//刷新=数据加载
+
+        void connect(DeviceBean bean);//连接设备
 
     }
 
