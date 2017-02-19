@@ -18,13 +18,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
         <activity
             android:name=".devicemanager.DeviceManagerActivity"
             android:theme="@style/CMTheme.NoActionBar">
         </activity>
         <activity android:name=".deviceedit.DeviceEditActivity">
+        </activity>
+        <activity android:name=".passchange.PassChangeActivity">
         </activity>
     </application>
 
