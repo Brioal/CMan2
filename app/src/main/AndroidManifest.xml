@@ -49,6 +49,8 @@
         </activity>
         <activity android:name=".devicedetail.DeviceDetailActivity">
         </activity>
+        <activity android:name=".deviceinfo.DeviceInfoActivity">
+        </activity>
     </application>
 
 </manifest>
