@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWhite"
+    android:orientation="vertical"
+    tools:context="com.brioal.cman2.about.ComplaintActivity">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <TextView
+            style="@style/CMTheme.TitleTv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="投诉"/>
+
+        <ImageButton
+            android:id="@+id/change_pass_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back_black"/>
+    </RelativeLayout>
+    <!--功能菜单-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="33dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="我的人身权被侵犯"
+            android:textColor="@color/colorTv_deviceName_black"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBgWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="我的知识产权被侵犯"
+            android:textColor="@color/colorTv_deviceName_black"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBgWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="其他原因"
+            android:textColor="@color/colorTv_deviceName_black"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+</LinearLayout>

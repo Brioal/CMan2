@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="8dp"
+        android:text="热点问题"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="33dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="如何将设备解除绑定?"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBgWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="同账号能否多机登陆?"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBgWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="如何手动设定温度?"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBgWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more_black"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="你未发现的厕所侠小功能"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="8dp"
+        android:text="我要提问"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:hint="请输入问题"
+        android:lines="7"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:textColorHint="@color/device_tv_color_outline"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/devmanager_btn_change"
+        android:enabled="false"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="3dp"
+        android:text="提交"
+        android:textColor="@drawable/devmanager_btn_color"/>
+
+    <TextView
+        android:id="@+id/change_pass_done_btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/devmanager_btn_change"
+        android:enabled="true"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="返回个人中心"
+        android:textColor="@drawable/devmanager_btn_color"
+        android:textSize="15sp"/>
+
+</LinearLayout>

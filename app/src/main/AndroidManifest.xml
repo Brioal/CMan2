@@ -23,9 +23,31 @@
             android:name=".devicemanager.DeviceManagerActivity"
             android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".deviceedit.DeviceEditActivity">
+        <activity
+            android:name=".deviceedit.DeviceEditActivity"
+            android:theme="@style/CMTheme.LauncherTheme">
         </activity>
-        <activity android:name=".passchange.PassChangeActivity">
+        <activity
+            android:name=".passchange.PassChangeActivity"
+            android:theme="@style/CMTheme.LauncherTheme">
+        </activity>
+        <activity
+            android:name=".qa.BackActivity"
+            android:theme="@style/CMTheme.LauncherTheme">
+        </activity>
+        <activity
+            android:name=".about.AboutActivity"
+            android:theme="@style/CMTheme.LauncherTheme">
+        </activity>
+        <activity android:name=".about.FuncationDescActivity">
+        </activity>
+        <activity android:name=".about.ComplaintActivity">
+        </activity>
+        <activity android:name=".about.OtherResonActivity">
+        </activity>
+        <activity android:name=".languagechange.LanguageChangeActivity">
+        </activity>
+        <activity android:name=".devicedetail.DeviceDetailActivity">
         </activity>
     </application>
 
