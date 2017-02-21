@@ -26,8 +26,8 @@ import okhttp3.Response;
  */
 
 public class ListModelImpl implements ListContract.Model {
-    private final String Device_List_Url = "http://192.168.3.27/cman/devicelist.php";
-    private final String Device_Statue_Url = "http://192.168.3.27/cman/changename.php";
+    private final String Device_List_Url = "http://192.168.191.1/cman/devicelist.php";
+    private final String Device_Statue_Url = "http://192.168.191.1/cman/changename.php";
 
     @Override
     public void loadDeviceList(final OnDeviceLoadListener listener) {

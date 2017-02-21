@@ -12,6 +12,7 @@
         />
     <!--社群-->
     <RelativeLayout
+        android:id="@+id/layout_shequn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -35,6 +36,7 @@
     </RelativeLayout>
     <!--商城-->
     <RelativeLayout
+        android:id="@+id/layout_shancheng"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">

@@ -10,11 +10,8 @@ import com.brioal.cman2.interfaces.OnNormalOperationListener;
 
 public class PassChangeContract {
     public interface View {
-        void showLoading();//显示正在加载
 
-        void showLoadingDone();//显示加载完成
-
-        void showLoadingFailed(String errorMsg);//显示加载失败
+        void showChanging();//显示正在修改
 
         void showChangeSuccess();//显示修改成功
 

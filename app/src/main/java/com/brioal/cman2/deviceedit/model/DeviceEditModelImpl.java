@@ -2,6 +2,7 @@ package com.brioal.cman2.deviceedit.model;
 
 import com.brioal.cman2.deviceedit.contract.DeviceEditContract;
 import com.brioal.cman2.interfaces.OnNormalOperationListener;
+import com.brioal.cman2.util.Netutil;
 import com.socks.library.KLog;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ import okhttp3.Response;
  */
 
 public class DeviceEditModelImpl implements DeviceEditContract.Model {
-    private final String changeNameUrl = "http://192.168.3.27/cman/changename.php";
+    private final String changeNameUrl = Netutil.getHostUrl()+"cman/changename.php";
 
     @Override
     public void changeDeviceName(String deviceID, String name, final OnNormalOperationListener listener) {

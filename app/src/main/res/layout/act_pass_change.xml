@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.brioal.cman2.passchange.PassChangeActivity">
+    tools:context="com.brioal.cman2.passchange.PassActivityChange">
     <!--标题栏-->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,7 +28,7 @@
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>

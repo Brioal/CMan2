@@ -4,6 +4,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:typeface">serif</item>
     </style>
 
     <!--NoActionBarStyle-->
@@ -47,5 +48,10 @@
         <item name="android:layout_height">25dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="et_style">
+        <item name="colorControlActivated">@color/colorTv_deviceName_black</item>
+        <item name="colorControlNormal">@color/colorTv_deviceName_black</item>
     </style>
 </resources>

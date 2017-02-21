@@ -7,4 +7,13 @@ import com.brioal.cman2.mine.contract.MainContract;
 
 public class MainPresenterImpl implements MainContract.Presenter{
 
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void commitFeedBack(String msg) {
+
+    }
 }

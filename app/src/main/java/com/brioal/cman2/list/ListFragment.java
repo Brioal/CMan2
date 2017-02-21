@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.brioal.cman2.R;
 import com.brioal.cman2.base.BaseFragment;
 import com.brioal.cman2.bean.DeviceBean;
+import com.brioal.cman2.devicedetail.DeviceDetailActivity;
 import com.brioal.cman2.interfaces.OnDeviceEnterListener;
 import com.brioal.cman2.list.contract.ListContract;
 import com.brioal.cman2.list.presenter.ListPresenterImpl;
@@ -248,7 +249,6 @@ public class ListFragment extends BaseFragment implements ListContract.View {
         if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
             mLoadingDialog.dismiss();
         }
-        // TODO: 2017/2/18 进入设备界面
-        showToast("进入设备界面");
+        DeviceDetailActivity.enterDeviceDetail(mContext);
     }
 }

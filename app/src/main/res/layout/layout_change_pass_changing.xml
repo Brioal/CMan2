@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@color/colorBgWhite"
+              android:orientation="vertical">
     <!--输入框-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,12 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:hint="请输入原来的密码"
-            android:textColorHint="@color/device_tv_color_outline"/>
+            android:inputType="number"
+            android:paddingBottom="15dp"
+            android:textColorHint="@color/device_tv_color_outline"
+            android:theme="@style/et_style"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/device_tv_color_outline"/>
 
         <EditText
             android:id="@+id/change_pass_et_new_pass"
@@ -33,12 +34,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:hint="请输入新密码"
-            android:textColorHint="@color/device_tv_color_outline"/>
+            android:inputType="number"
+            android:paddingBottom="15dp"
+            android:textColorHint="@color/device_tv_color_outline"
+            android:theme="@style/et_style"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/device_tv_color_outline"/>
 
         <EditText
             android:id="@+id/change_pass_et_new_pass_config"
@@ -46,7 +46,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:hint="请再次输入新密码"
-            android:textColorHint="@color/device_tv_color_outline"/>
+            android:inputType="number"
+            android:paddingBottom="15dp"
+            android:textColorHint="@color/device_tv_color_outline"
+            android:theme="@style/et_style"/>
 
     </LinearLayout>
 

@@ -1,9 +1,10 @@
 package com.brioal.cman2.devicemanager.model;
 
 import com.brioal.cman2.bean.DeviceBean;
+import com.brioal.cman2.devicemanager.contract.DeviceManagerContract;
 import com.brioal.cman2.interfaces.OnDeviceLoadListener;
 import com.brioal.cman2.interfaces.OnNormalOperationListener;
-import com.brioal.cman2.devicemanager.contract.DeviceManagerContract;
+import com.brioal.cman2.util.Netutil;
 import com.socks.library.KLog;
 
 import org.json.JSONArray;
@@ -26,8 +27,8 @@ import okhttp3.Response;
  */
 
 public class DeviceManagerModelImpl implements DeviceManagerContract.Model {
-    private final String Device_List_Url = "http://192.168.3.27/cman/devicelist.php";
-    private final String Change_Name_Url = "http://192.168.3.27/cman/deletedevice.php";
+    private final String Device_List_Url = Netutil.getHostUrl()+"cman/devicelist.php";
+    private final String Change_Name_Url = Netutil.getHostUrl()+"cman/deletedevice.php";
 
     @Override
     public void loadDeviceList(final OnDeviceLoadListener listener) {

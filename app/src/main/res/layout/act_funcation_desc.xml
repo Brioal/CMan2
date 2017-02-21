@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBgWhite"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="com.brioal.cman2.about.FuncationDescActivity">
     <!--标题栏-->
     <RelativeLayout
@@ -21,26 +22,26 @@
             android:text="功能介绍"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/funcation_desc_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
     </RelativeLayout>
     <!--功能详情-->
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@android:color/white"
         android:paddingBottom="55dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="55dp"
         android:text="       厕所侠可根据环境进行温度设定,湿度设定,气味灵敏度设定,同时可遥控音量,风量,功能开启,模式选择等等"
-        android:textSize="16sp"
-        android:background="@android:color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="16sp"/>
 </LinearLayout>

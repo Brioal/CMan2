@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.brioal.cman2.about.OtherResonActivity">
+    android:fitsSystemWindows="true"
+    tools:context="com.brioal.cman2.complaint.OtherResonActivity">
     <!--标题栏-->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,18 +21,19 @@
             android:text="其他原因"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/other_reson_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
     </RelativeLayout>
 
     <EditText
+        android:id="@+id/other_reson_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -45,6 +47,7 @@
         android:textSize="14sp"/>
 
     <TextView
+        android:id="@+id/other_reson_btn_commit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"

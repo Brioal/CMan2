@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="com.brioal.cman2.about.ComplaintActivity">
     <!--标题栏-->
@@ -21,18 +22,19 @@
             android:text="投诉"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/complaint_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
     </RelativeLayout>
     <!--功能菜单-->
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -41,11 +43,13 @@
         android:paddingLeft="33dp">
 
         <TextView
+            android:id="@+id/complaint_tv_renshen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="15dp"
             android:paddingTop="3dp"
             android:text="我的人身权被侵犯"
             android:textColor="@color/colorTv_deviceName_black"
@@ -57,11 +61,13 @@
             android:background="@color/colorBgWhite"/>
 
         <TextView
+            android:id="@+id/complaint_tv_zhishi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="15dp"
             android:paddingTop="3dp"
             android:text="我的知识产权被侵犯"
             android:textColor="@color/colorTv_deviceName_black"
@@ -73,11 +79,13 @@
             android:background="@color/colorBgWhite"/>
 
         <TextView
+            android:id="@+id/complaint_tv_other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="15dp"
             android:paddingTop="3dp"
             android:text="其他原因"
             android:textColor="@color/colorTv_deviceName_black"

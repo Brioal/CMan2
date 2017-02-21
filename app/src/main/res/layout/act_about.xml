@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="com.brioal.cman2.about.AboutActivity">
     <!--标题栏-->
@@ -21,12 +22,12 @@
             android:text="关于我们"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/act_about_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
@@ -40,6 +41,7 @@
         android:src="@mipmap/ic_logo"/>
     <!--版本号-->
     <TextView
+        android:id="@+id/act_about_tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -57,11 +59,13 @@
         android:paddingLeft="33dp">
 
         <TextView
+            android:id="@+id/act_about_tv_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="5dp"
             android:paddingTop="3dp"
             android:text="给我评分"
             android:textColor="@color/colorTv_deviceName_black"
@@ -70,14 +74,16 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/colorBgWhite"/>
+            android:background="@color/device_tv_color_outline"/>
 
         <TextView
+            android:id="@+id/act_about_tv_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="5dp"
             android:paddingTop="3dp"
             android:text="功能介绍"
             android:textColor="@color/colorTv_deviceName_black"
@@ -86,14 +92,16 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/colorBgWhite"/>
+            android:background="@color/device_tv_color_outline"/>
 
         <TextView
+            android:id="@+id/act_about_tv_complaint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more_black"
             android:gravity="center_vertical"
             android:paddingBottom="3dp"
+            android:paddingRight="5dp"
             android:paddingTop="3dp"
             android:text="投诉"
             android:textColor="@color/colorTv_deviceName_black"

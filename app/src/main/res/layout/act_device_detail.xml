@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="com.brioal.cman2.devicedetail.DeviceDetailActivity">
     <!--标题栏-->
@@ -21,12 +22,12 @@
             android:text="设备名称"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/devie_detail_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
@@ -51,12 +52,14 @@
                 android:textSize="16sp"/>
 
             <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/device_detail_btn_close"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_alignParentRight="true"
                 android:layout_margin="10dp"
                 android:background="@drawable/dev_statue"
-                android:button="@null"/>
+                android:button="@null"
+                android:checked="true"/>
         </RelativeLayout>
         <!--区域环境-->
         <LinearLayout
@@ -73,6 +76,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_tmp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -100,6 +104,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_hum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -127,6 +132,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_bc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -148,6 +154,7 @@
     </LinearLayout>
     <!--控制状态-->
     <TextView
+        android:id="@+id/device_detail_tv_auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -186,6 +193,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_value_tmp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -213,6 +221,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_value_hum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -240,6 +249,7 @@
                 android:paddingBottom="20dp">
 
                 <TextView
+                    android:id="@+id/device_detail_tv_value_sme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -265,10 +275,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/devmanager_btn_change"
@@ -288,7 +300,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/devmanager_btn_change"
@@ -308,7 +320,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/devmanager_btn_change"

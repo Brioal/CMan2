@@ -22,6 +22,7 @@ public class LanguageChangeContract {
     }
 
     public interface Model {
+
     }
 
 

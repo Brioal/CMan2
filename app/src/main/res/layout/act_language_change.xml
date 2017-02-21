@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBgWhite"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="com.brioal.cman2.about.ComplaintActivity">
     <!--标题栏-->
@@ -21,18 +22,19 @@
             android:text="语言切换"/>
 
         <ImageButton
-            android:id="@+id/change_pass_btn_back"
+            android:id="@+id/language_btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/toolbar_btn_magin_left"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_black"/>
     </RelativeLayout>
     <!--功能菜单-->
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/language_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -40,11 +42,14 @@
         android:orientation="vertical"
         android:paddingLeft="33dp">
 
-        <TextView
+        <RadioButton
+            android:id="@+id/language_tv_simplechinese"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@mipmap/ic_language_select"
+            android:layout_margin="5dp"
+            android:button="@null"
             android:gravity="center_vertical"
+            android:padding="10dp"
             android:paddingBottom="3dp"
             android:paddingRight="10dp"
             android:paddingTop="3dp"
@@ -57,10 +62,14 @@
             android:layout_height="0.5dp"
             android:background="@color/colorBgWhite"/>
 
-        <TextView
+        <RadioButton
+            android:id="@+id/language_tv_traditional_chinese"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:button="@null"
             android:gravity="center_vertical"
+            android:padding="10dp"
             android:paddingBottom="3dp"
             android:paddingRight="10dp"
             android:paddingTop="3dp"
@@ -73,10 +82,14 @@
             android:layout_height="0.5dp"
             android:background="@color/colorBgWhite"/>
 
-        <TextView
+        <RadioButton
+            android:id="@+id/language_tv_english"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:button="@null"
             android:gravity="center_vertical"
+            android:padding="10dp"
             android:paddingBottom="3dp"
             android:paddingRight="10dp"
             android:paddingTop="3dp"
@@ -85,7 +98,7 @@
             android:textSize="15sp"/>
 
 
-    </LinearLayout>
+    </RadioGroup>
 
     <TextView
         android:id="@+id/change_pass_done_btn_back"

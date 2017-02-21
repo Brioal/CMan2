@@ -25,31 +25,45 @@
         </activity>
         <activity
             android:name=".deviceedit.DeviceEditActivity"
-            android:theme="@style/CMTheme.LauncherTheme">
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".passchange.PassChangeActivity"
-            android:theme="@style/CMTheme.LauncherTheme">
+            android:name=".passchange.PassActivityChange"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
         <activity
             android:name=".qa.BackActivity"
-            android:theme="@style/CMTheme.LauncherTheme">
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
         <activity
             android:name=".about.AboutActivity"
-            android:theme="@style/CMTheme.LauncherTheme">
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".about.FuncationDescActivity">
+        <activity
+            android:name=".about.FuncationDescActivity"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".about.ComplaintActivity">
+        <activity
+            android:name=".about.ComplaintActivity"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".about.OtherResonActivity">
+        <activity
+            android:name=".complaint.OtherResonActivity"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".languagechange.LanguageChangeActivity">
+        <activity
+            android:name=".languagechange.LanguageChangeActivity"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".devicedetail.DeviceDetailActivity">
+        <activity
+            android:name=".devicedetail.DeviceDetailActivity"
+            android:theme="@style/CMTheme.NoActionBar">
         </activity>
-        <activity android:name=".deviceinfo.DeviceInfoActivity">
+        <activity
+            android:name=".deviceinfo.DeviceInfoActivity"
+            android:theme="@style/CMTheme.NoActionBar">
+        </activity>
+        <activity android:name=".feedback.FeedBackActivity">
         </activity>
     </application>
 

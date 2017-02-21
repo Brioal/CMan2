@@ -1,4 +1,5 @@
 package com.brioal.cman2.mine.model;
+import com.brioal.cman2.interfaces.OnNormalOperationListener;
 import com.brioal.cman2.mine.contract.MainContract;
 
 /**
@@ -7,4 +8,8 @@ import com.brioal.cman2.mine.contract.MainContract;
 
 public class MainModelImpl implements MainContract.Model{
 
+    @Override
+    public void commitFeedBack(String msg, OnNormalOperationListener listener) {
+
+    }
 }
